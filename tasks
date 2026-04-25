@@ -1,0 +1,30 @@
+Timer / Cooldown System:
+You will write self.timer -= dt a thousand times in a game jam for attack cooldowns,
+invincibility frames, or delayed events.
+A centralized timer system where you can just say
+"Do this action in 2.5 seconds" will save you tons of debugging time.
+
+2D Camera:
+A system that handles translating world coordinates to screen coordinates.
+You'll want it to support following a target (like the player),
+clamping to map boundaries, and ideally,
+a built-in "screen shake" function for instant game juice.
+
+Sprite Sheet / Animation Controller:
+A standard way to slice up a grid-based image and play animations by name
+(e.g., play("run")), complete with frame-rate control and looping/one-shot settings.
+
+Audio Manager:
+A dedicated controller for music and sound effects.
+You'll want the ability to crossfade music tracks,
+easily play overlapping sound effects without cutting each other off,
+and control global volume channels separately (Music Vol vs. SFX Vol).
+
+Simple Particle Emitter:
+Particles make every game look instantly better.
+Having a generic class that can spew colored squares or small sprites
+with randomized velocities, fading, and lifetimes is a game jam lifesaver.
+
+Save/Load Utility:
+A quick helper that serializes a dictionary into a JSON file and loads it back.
+Great for saving high scores, settings, or level unlocks between sessions.
