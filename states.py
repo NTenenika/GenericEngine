@@ -1,3 +1,4 @@
+# states.py
 from game import *
 
 class States:
@@ -23,7 +24,15 @@ class StartState(States):
     # for events in events:
     #   # any conditions
     #   self.game.pop_state()
+    # # the only reason pop would be used is if you won't
+    # # get back to this state
     #   self.game.push_state(Generic_State(self.game, #data))
     pass
   def draw(self, surface):
     pass
+
+# class Generic_State(States):
+#   def __init__(self, game):
+#     States.__init__(self, game)
+#     # state specific variables
+#     # you can also draw stuff to the screen here

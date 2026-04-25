@@ -1,4 +1,5 @@
-import pygame as pg
+# constants.py
+import pygame as pg # saves typing
 kGAME_NAME = "Title"
 
 kFPS = 60
