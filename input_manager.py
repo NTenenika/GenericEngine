@@ -12,20 +12,17 @@ class Input:
   def unpressed(self):
     self.flag = False
   def print(self):
-    print(f"Input Name: {self.name}")
+    print(self.name)
 # to add an input you do this:
 # jump = Input(pg.K_SPACE, "Jump")
 # kINPUTS = [jump]
 
 class InputManager:
   def __init__(self, inputs):
-    print("Hey\n")
     self.inputs = []
     if isinstance(inputs, list):
-      print("Hello again\n")
       self.inputs = inputs
     elif isinstance(inputs, dict):
-      print("Hello\n")
       for name, val in inputs.items():
         new_input = Input(val, name)
         self.inputs.append(new_input)

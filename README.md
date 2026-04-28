@@ -21,7 +21,6 @@ right now, pygame is where I'll focus
 
 ### Currently Working on...
 - camera system
-- event bus
 - animation controller
 - audio manager
 - particle system
