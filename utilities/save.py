@@ -1,6 +1,6 @@
 # save.py
 
-import json
+from json import load, dumps
 
 # for this honestly you can put whatever you want
 # these were just some ideas
@@ -30,11 +30,11 @@ class ProgressTracker:
       }
 
   def convert_to_json(self, save_data_name = 0):
-    with open(f"local_save{save_data_name}.json", mode="w", encoding="utf-8") as write_file:
-      json.dumps(self.tracker)
+    with open(f"local_save{save_data_name}.json", mode="w", encoding="utf-8") as self.tracker:
+      dumps(self.tracker)
   def convert_from_json(self, save_data_name = 0):
     with open(f"local_save{save_data_name}.json", mode="r", encoding="utf-8") as read_file:
-      self.tracker = json.load(read_file)
+      self.tracker = load(read_file)
   # in the parameters, pass in the variables used
   def update(self):
     # in here you just assign

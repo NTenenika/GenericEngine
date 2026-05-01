@@ -1,6 +1,7 @@
 # input_manager.py
-import pygame.event as event
-import pygame.key as key
+
+from pygame import event as event
+from pygame import key as key
 
 class Input:
   def __init__(self, input_, name, flag = False):

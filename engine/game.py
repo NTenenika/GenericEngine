@@ -1,7 +1,10 @@
 # game.py
+
 from constants import *
-from stack import Stack
+from adts.stack import Stack
 from asyncio import sleep
+
+
 class Game:
   def __init__(self):
     self.states = Stack()
@@ -46,6 +49,10 @@ class Game:
       pg.display.flip()
       await sleep(0)
   def run(self):
+    # capacity = 1
+    # filename = "sprites/sprite.png"
+    # char = [Asset("char", filename, capacity)]
+    # am = AssetManager(list(char), capacity)
     run = True
     clock = pg.time.Clock()
     while run:
@@ -55,6 +62,9 @@ class Game:
         if event.type == pg.QUIT:
           run = False
 
+      # am.sprites.update()
+      # self.window.fill(pg.Color("white"))
+      # am.sprites.draw(self.window)
       pg.display.flip()
       clock.tick(kFPS)
     pg.quit()

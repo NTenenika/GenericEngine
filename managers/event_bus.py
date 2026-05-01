@@ -1,7 +1,7 @@
 # event_bus.py
 
 kEVENTS = {
-
+  # "name" : func()
 }
 
 class EventBus:

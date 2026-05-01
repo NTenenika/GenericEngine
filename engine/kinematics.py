@@ -1,6 +1,7 @@
 # kinematics.py
 
-from constants import *
+# from constants import kGRAVITY, kCOEFFICIENT
+from pygame import math as pg
 # either gravity defined here or in constants
 kGRAVITY = 9.8
 kCOEFFICIENT = 0.8 # 0 < coeff < 1
@@ -8,7 +9,7 @@ kCOEFFICIENT = 0.8 # 0 < coeff < 1
 # and you can just delete this file
 class Gravity:
   def __init__(self):
-    self.force = pg.math.Vector2(0, kGRAVITY)
+    self.force = pg.Vector2(0, kGRAVITY)
   def apply(self, velocity_obj, dt):
     velocity_obj.vector += self.force * dt
 
@@ -20,7 +21,7 @@ class Friction:
 
 class Velocity:
   def __init__(self, x = 0, y = 0):
-    self.vector = pg.math.Vector2(x, y)
+    self.vector = pg.Vector2(x, y)
   def set_x(self, x):
     self.vector.x = x
   def set_y(self, y):
